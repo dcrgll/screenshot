@@ -1,0 +1,31 @@
+{
+  "name": "sitemap-screenshot-cli",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "CLI to crawl a sitemap and take full-page screenshots of each URL using Playwright",
+  "bin": {
+    "sitemap-screenshot": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "postinstall": "playwright install chromium",
+    "lint": "echo 'No linter configured'"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "fast-xml-parser": "^4.5.0",
+    "p-limit": "^5.0.0",
+    "playwright": "^1.47.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.3",
+    "@types/node": "^22.7.5"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
